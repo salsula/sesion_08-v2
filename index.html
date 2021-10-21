@@ -38,6 +38,7 @@
                 <h2>El perfil de los compradores</h2>
                 <p>Si bien es cierto la gran mayoría de usuarios que suele comprar artículos a través de internet son personas más jóvenes (25 a 36 años), el estudio de Gfk Adimark ha descubierto un aumento del 18% en la cantidad de compradores virtuales del segmento que va entre los 45 y 65 años, en el periodo 2019-2020. Esto ha dejado claro que el comercio electrónico se ha vuelto una ayuda muy importante durante la pandemia, ya que ha logrado conectar con un público que comúnmente es más reacio a realizar transacciones por internet.</p>
                 <p>Por otra parte, del total de encuestados, un 95% ha declarado que por lo menos una vez al mes dedica tiempo a vitrinear por internet. No obstante, el parámetro que más se elevó respecto a la versión anterior del estudio son las personas que declaran visitar el comercio vía on line al menos una vez a la semana, número que pasó de un 52% al 77% durante la pandemia.</p>
+                <p>*Esta noticia fue originalmente publicada en el <a href="https://radio.uchile.cl/2021/05/28/comercio-electronico-que-estan-comprando-los-chilenos-por-internet/" target="_blank">Diario Universidad de Chile</a>, una página para nada chanta.</p>
             </section>
         </article>
         <canvas id="grafico" width="400" height="400"></canvas>
@@ -63,13 +64,14 @@
             });
         </script>
         <script>
-            new Chart(document.getElementById("grafico").getContext("2d"), {
+            var ctx = document.getElementById('grafico');
+            var myChart = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['Vestuario y Calzado', 'Alimentos y Bebidas', 'Artículos de belleza', 'Hogar y Muebles'],
                     datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
+                        label: 'Preferencias en %',
+                        data: [47, 34, 25, 24],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
