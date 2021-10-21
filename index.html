@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
         <link href="style.css" rel="stylesheet" />
-        <title>Evaluación Nº1</title>
+        <title>NoticiasChantas</title>
     </head>
     <body>
         <nav class="fixed-top py-3">
@@ -32,7 +32,6 @@
                 <h2>Vestuario, alimentos y artículos de belleza</h2>
                 <p>El reporte Radiografía del eCommerce publicado recientemente por Gfk Adimark, indicó que las categorías más frecuentadas por los chilenos a la hora de comprar por internet son Vestuario y Calzado (47%), Alimentos y Bebidas (34%), Artículos de belleza (25%), además de Hogar y Muebles (24%).</p>
                 <p>Otra categoría bastante seguida, según han indicado desde la plataforma Linio, es Tecnología. Productos como computadores, celulares, tablets, audífonos, televisores, entre otros, están siendo bastante solicitados en su sitio, ya sea con envíos nacionales e internacionales.</p>
-                <canvas id="myChart" width="100%" height="100%"></canvas>
                 <h2>¿Y qué pasa con otras categorías?</h2>
                 <p>Según el reporte de la UNCTAD, hay rubros que se han visto más afectados por la pandemia del coronavirus. Tal es el caso, por ejemplo, de la industria hotelera, los servicios de transporte, agencias de turismo, aerolíneas y el mundo inmobiliario.</p>
                 <p>Todos estos han tenido que inventar nuevos modos de atraer al cliente, ya sea a través de promociones o importantes descuentos. En el caso del mercado inmobiliario, han tenido que hallar una nueva forma de mostrar sus propiedades: “Muchas inmobiliarias han implementado innovadores sistemas que ocupan la tecnología de los recorridos virtuales para mostrar casas, departamentos o terrenos. Es la única forma de mantener vivo a una industria que fue muy afectada el año pasado”, indica Sebastián Yáñez Quezada, experto en marketing inmobiliario.</p>
@@ -41,6 +40,7 @@
                 <p>Por otra parte, del total de encuestados, un 95% ha declarado que por lo menos una vez al mes dedica tiempo a vitrinear por internet. No obstante, el parámetro que más se elevó respecto a la versión anterior del estudio son las personas que declaran visitar el comercio vía on line al menos una vez a la semana, número que pasó de un 52% al 77% durante la pandemia.</p>
             </section>
         </article>
+        <canvas id="grafico" width="400" height="400"></canvas>
         <footer class="mt-5">
             <div class="container py-3">
                 <span class="d-flex justify-content-between align-items-center">
@@ -63,9 +63,8 @@
             });
         </script>
         <script>
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'bar',
+            new Chart(document.getElementById("grafico").getContext("2d"), {
+                type: 'pie',
                 data: {
                     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                     datasets: [{
@@ -98,6 +97,6 @@
                     }
                 }
             });
-            </script>
+        </script>
     </body>
 </html>
