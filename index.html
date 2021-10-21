@@ -32,6 +32,7 @@
                 <h2>Vestuario, alimentos y artículos de belleza</h2>
                 <p>El reporte Radiografía del eCommerce publicado recientemente por Gfk Adimark, indicó que las categorías más frecuentadas por los chilenos a la hora de comprar por internet son Vestuario y Calzado (47%), Alimentos y Bebidas (34%), Artículos de belleza (25%), además de Hogar y Muebles (24%).</p>
                 <p>Otra categoría bastante seguida, según han indicado desde la plataforma Linio, es Tecnología. Productos como computadores, celulares, tablets, audífonos, televisores, entre otros, están siendo bastante solicitados en su sitio, ya sea con envíos nacionales e internacionales.</p>
+                <canvas class="pb-3" id="grafico" width="400" height="400"></canvas>
                 <h2>¿Y qué pasa con otras categorías?</h2>
                 <p>Según el reporte de la UNCTAD, hay rubros que se han visto más afectados por la pandemia del coronavirus. Tal es el caso, por ejemplo, de la industria hotelera, los servicios de transporte, agencias de turismo, aerolíneas y el mundo inmobiliario.</p>
                 <p>Todos estos han tenido que inventar nuevos modos de atraer al cliente, ya sea a través de promociones o importantes descuentos. En el caso del mercado inmobiliario, han tenido que hallar una nueva forma de mostrar sus propiedades: “Muchas inmobiliarias han implementado innovadores sistemas que ocupan la tecnología de los recorridos virtuales para mostrar casas, departamentos o terrenos. Es la única forma de mantener vivo a una industria que fue muy afectada el año pasado”, indica Sebastián Yáñez Quezada, experto en marketing inmobiliario.</p>
@@ -41,7 +42,6 @@
                 <p>*Esta noticia fue originalmente publicada en el <a href="https://radio.uchile.cl/2021/05/28/comercio-electronico-que-estan-comprando-los-chilenos-por-internet/" target="_blank">Diario Universidad de Chile</a>, una página para nada chanta.</p>
             </section>
         </article>
-        <canvas id="grafico" width="400" height="400"></canvas>
         <footer class="mt-5">
             <div class="container py-3">
                 <span class="d-flex justify-content-between align-items-center">
@@ -63,6 +63,10 @@
                 }
             });
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
         <script>
             var ctx = document.getElementById('grafico');
             var myChart = new Chart(ctx, {
@@ -73,22 +77,18 @@
                         label: 'Preferencias en %',
                         data: [47, 34, 25, 24],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(22, 16, 50, 1)',
+                            'rgba(235, 138, 144, 1)',
+                            'rgba(171, 217, 233, 1)',
+                            'rgba(44, 123, 182, 1)'
                         ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                        hoverBackgroundColor: [
+                            'rgba(22, 16, 50, .9)',
+                            'rgba(235, 138, 144, .9)',
+                            'rgba(171, 217, 233, .9)',
+                            'rgba(44, 123, 182, .9)'
                         ],
-                        borderWidth: 1
+                        borderWidth: 0,
                     }]
                 },
                 options: {
