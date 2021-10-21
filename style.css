@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+:root {
+    --bs-body-font-family: "Fira Sans", sans-serif;
+    --bs-body-font-size: 1.2rem;
+    --bs-body-font-weight: 400;
+    --bs-body-bg: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#fondo-con-imagen {
+    height: 70vh;
+    background-image: url("img/compras-online2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+* {
+    transition: all .3s ease;
+}
+
+header, nav {
+    color: #f9f9f9;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.bajada {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #ebebeb;
+}

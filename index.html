@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <link href="style.css" rel="stylesheet" />
+        <title>Evaluación Nº1</title>
+    </head>
+    <body>
+        <nav class="fixed-top py-3">
+            <div class="container-fluid d-flex justify-content-center align-items-center">
+                <h3 class="m-0 pe-2">NoticiasChantas</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+                    <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+                </svg>
+            </div>
+        </nav>
+        <header class="container-fluid" id="fondo-con-imagen">
+            <div class="row h-100 ">
+                <div class="div text-center w-75 m-auto">
+                    <h1>Comercio electrónico: ¿Qué están comprando los chilenos por internet?</h1>
+                    <p class="bajada">Debido a la pandemia, las ventas online han aumentado en un gran porcentaje, lo que quedó demostrado en el último reporte de la Conferencia de las Naciones Unidas sobre Comercio y Desarrollo.</p>
+                </div>
+            </div>
+        </header>
+        <article class="pt-5" id="test">
+            <section class="container">
+                <p>La acción de vitrinear ha cambiado un poco el último año. Ya no todas las personas prefieren pasearse por los interminables pasillos de los centros comerciales para encontrar un producto. Hoy en día, varios han cambiado el mundo presencial por el digital, paseándose ahora entre una página web y otra.</p>
+                <p>Es que el comercio electrónico ha vivido una importante alza durante la pandemia, cosa que ha quedado demostrado en las últimas cifras de la  Conferencia de las Naciones Unidas sobre Comercio y Desarrollo (UNCTAD), que señalan que de 2019 a 2020 las ganancias de las empresas online más importantes del mundo se incrementaron en un 18.3%.</p>
+                <p>En Chile también se ha experimentado este buen momento, ya que durante el año pasado el comercio electrónico registró ventas por más de US$9 mil millones, según un estudio de BlackSip. Pero, ¿por cuáles productos se han inclinado los chilenos?</p>
+                <h2>Vestuario, alimentos y artículos de belleza</h2>
+                <p>El reporte Radiografía del eCommerce publicado recientemente por Gfk Adimark, indicó que las categorías más frecuentadas por los chilenos a la hora de comprar por internet son Vestuario y Calzado (47%), Alimentos y Bebidas (34%), Artículos de belleza (25%), además de Hogar y Muebles (24%).</p>
+                <p>Otra categoría bastante seguida, según han indicado desde la plataforma Linio, es Tecnología. Productos como computadores, celulares, tablets, audífonos, televisores, entre otros, están siendo bastante solicitados en su sitio, ya sea con envíos nacionales e internacionales.</p>
+                <canvas id="myChart" width="100%" height="100%"></canvas>
+                <h2>¿Y qué pasa con otras categorías?</h2>
+                <p>Según el reporte de la UNCTAD, hay rubros que se han visto más afectados por la pandemia del coronavirus. Tal es el caso, por ejemplo, de la industria hotelera, los servicios de transporte, agencias de turismo, aerolíneas y el mundo inmobiliario.</p>
+                <p>Todos estos han tenido que inventar nuevos modos de atraer al cliente, ya sea a través de promociones o importantes descuentos. En el caso del mercado inmobiliario, han tenido que hallar una nueva forma de mostrar sus propiedades: “Muchas inmobiliarias han implementado innovadores sistemas que ocupan la tecnología de los recorridos virtuales para mostrar casas, departamentos o terrenos. Es la única forma de mantener vivo a una industria que fue muy afectada el año pasado”, indica Sebastián Yáñez Quezada, experto en marketing inmobiliario.</p>
+                <h2>El perfil de los compradores</h2>
+                <p>Si bien es cierto la gran mayoría de usuarios que suele comprar artículos a través de internet son personas más jóvenes (25 a 36 años), el estudio de Gfk Adimark ha descubierto un aumento del 18% en la cantidad de compradores virtuales del segmento que va entre los 45 y 65 años, en el periodo 2019-2020. Esto ha dejado claro que el comercio electrónico se ha vuelto una ayuda muy importante durante la pandemia, ya que ha logrado conectar con un público que comúnmente es más reacio a realizar transacciones por internet.</p>
+                <p>Por otra parte, del total de encuestados, un 95% ha declarado que por lo menos una vez al mes dedica tiempo a vitrinear por internet. No obstante, el parámetro que más se elevó respecto a la versión anterior del estudio son las personas que declaran visitar el comercio vía on line al menos una vez a la semana, número que pasó de un 52% al 77% durante la pandemia.</p>
+            </section>
+        </article>
+        <footer class="mt-5">
+            <div class="container py-3">
+                <span class="d-flex justify-content-between align-items-center">
+                    <a href="https://github.com/dsalas1234" target="_blank">Daniel Salas</a>
+                    <a href="https://www.u-cursos.cl/fau/2021/2/AUD5V0010/1/historial/" target="_blank">AUD5V0010</a>
+                </span>
+            </div>
+        </footer>
+        <script>
+            var altura = document.getElementById("fondo-con-imagen").offsetHeight;
+            window.addEventListener("scroll", (event) => {
+                let scroll = this.scrollY;
+                console.log(scroll);
+                var element = document.getElementsByTagName("nav")[0];
+                if (scroll > altura) {
+                    element.classList.add("d-none");
+                } else {
+                    element.classList.remove("d-none");
+                }
+            });
+        </script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+    </body>
+</html>
