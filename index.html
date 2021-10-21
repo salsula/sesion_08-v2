@@ -70,23 +70,23 @@
         <script>
             var ctx = document.getElementById('grafico');
             var myChart = new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels: ['Vestuario y Calzado', 'Alimentos y Bebidas', 'Artículos de belleza', 'Hogar y Muebles'],
                     datasets: [{
                         label: 'Preferencias en %',
                         data: [47, 34, 25, 24],
                         backgroundColor: [
-                            'rgba(22, 16, 50, 1)',
-                            'rgba(235, 138, 144, 1)',
+                            'rgba(251, 216, 127, 1)',
+                            'rgba(240, 113, 103, 1)',
                             'rgba(171, 217, 233, 1)',
                             'rgba(44, 123, 182, 1)'
                         ],
                         hoverBackgroundColor: [
-                            'rgba(22, 16, 50, .9)',
-                            'rgba(235, 138, 144, .9)',
-                            'rgba(171, 217, 233, .9)',
-                            'rgba(44, 123, 182, .9)'
+                            'rgba(251, 216, 127, .8)',
+                            'rgba(240, 113, 103, .8)',
+                            'rgba(171, 217, 233, .8)',
+                            'rgba(44, 123, 182, .8)'
                         ],
                         borderWidth: 0,
                     }]
