@@ -5,6 +5,8 @@
     --bs-body-font-size: 1.2rem;
     --bs-body-font-weight: 400;
     --bs-body-bg: #f9f9f9;
+    --bs-blue: #006598;
+    --bs-red: #c00;
 }
 
 h1,
@@ -28,6 +30,17 @@ strong {
 
 * {
     transition: all .3s ease;
+}
+
+a {
+    color: var(--bs-blue);
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: var(--bs-red);
+    text-decoration: none;
 }
 
 header, nav {
